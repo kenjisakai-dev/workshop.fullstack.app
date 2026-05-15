@@ -9,7 +9,6 @@ Aplicação Angular de cadastro de **Produtos**, construída como exemplo de wor
 ## Pré-requisitos
 
 - Node.js 20+
-- Backend rodando em `http://localhost:3000` (veja o repositório acima)
 
 ## Como rodar
 
