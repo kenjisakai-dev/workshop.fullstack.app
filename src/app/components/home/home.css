@@ -10,6 +10,7 @@
 form {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
   gap: 0.75rem;
   margin-bottom: 2rem;
   padding: 1.25rem;
@@ -17,9 +18,17 @@ form {
   border-radius: 8px;
 }
 
-input {
+label {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   min-width: 160px;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #b4b4c8;
+}
+
+input {
   padding: 0.6rem 0.8rem;
   background-color: #1e1e2e;
   color: #e4e4e7;

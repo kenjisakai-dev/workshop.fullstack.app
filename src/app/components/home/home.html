@@ -1,7 +1,16 @@
 <form [formGroup]="produtoForm" (ngSubmit)="submit()">
-  <input type="text" formControlName="nome" placeholder="Digite o nome do produto" />
-  <input type="number" formControlName="quantidade" placeholder="Digite a quantidade" />
-  <input type="text" formControlName="categoria" placeholder="Digite a categoria" />
+  <label>
+    Nome
+    <input type="text" formControlName="nome" placeholder="Digite o nome do produto" />
+  </label>
+  <label>
+    Quantidade
+    <input type="number" formControlName="quantidade" placeholder="Digite a quantidade" />
+  </label>
+  <label>
+    Categoria
+    <input type="text" formControlName="categoria" placeholder="Digite a categoria" />
+  </label>
   <button type="submit" [disabled]="produtoForm.invalid">Salvar</button>
 </form>
 

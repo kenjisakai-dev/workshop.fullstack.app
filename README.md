@@ -43,5 +43,4 @@ Enquanto algum campo estiver inválido, o botão **Salvar** permanece desabilita
 
 ```bash
 npm start       # ng serve
-npm run build   # build de produção
 ```
