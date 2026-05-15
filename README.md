@@ -1,59 +1,47 @@
-# WorkshopFullstackApp
+# Workshop Fullstack App — Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+Aplicação Angular de cadastro de **Produtos**, construída como exemplo de workshop.
 
-## Development server
+- **Framework:** Angular 21 (standalone components, Reactive Forms, Signals)
+- **HTTP client:** axios
+- **Backend (repositório separado):** https://github.com/kenjisakai-dev/workshop.fullstack.api
 
-To start a local development server, run:
+## Pré-requisitos
 
-```bash
-ng serve
-```
+- Node.js 20+
+- Backend rodando em `http://localhost:3000` (veja o repositório acima)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Como rodar
 
 ```bash
-ng generate component component-name
+npm install
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Abra `http://localhost:4200`.
+
+## Funcionalidades
+
+- Formulário de cadastro com validação (todos campos obrigatórios, quantidade ≥ 1)
+- Listagem em tabela dos produtos cadastrados
+- Tema dark
+- Comunicação com a API via `axios`
+
+## ⚠️ Atenção ao usar o formulário
+
+Todos os campos são **obrigatórios** para que o botão **Salvar** seja habilitado:
+
+| Campo      | Regra                                |
+| ---------- | ------------------------------------ |
+| Nome       | Obrigatório (pelo menos 1 caractere) |
+| Quantidade | Obrigatório e valor mínimo **1**     |
+| Categoria  | Obrigatório (pelo menos 1 caractere) |
+
+Enquanto algum campo estiver inválido, o botão **Salvar** permanece desabilitado.
+
+## Scripts úteis
 
 ```bash
-ng generate --help
+npm start       # ng serve
+npm run build   # build de produção
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

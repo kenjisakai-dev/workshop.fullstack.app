@@ -1,0 +1,32 @@
+<form [formGroup]="produtoForm" (ngSubmit)="submit()">
+  <input type="text" formControlName="nome" placeholder="Digite o nome do produto" />
+  <input type="number" formControlName="quantidade" placeholder="Digite a quantidade" />
+  <input type="text" formControlName="categoria" placeholder="Digite a categoria" />
+  <button type="submit" [disabled]="produtoForm.invalid">Salvar</button>
+</form>
+
+<h1>Produtos</h1>
+@if (produtos().length === 0) {
+  <p>Não há produtos disponíveis.</p>
+} @else {
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Categoria</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of produtos(); track item.id) {
+        <tr>
+          <td>{{ item.id }}</td>
+          <td>{{ item.nome }}</td>
+          <td>{{ item.quantidade }}</td>
+          <td>{{ item.categoria }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}
